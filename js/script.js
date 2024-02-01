@@ -4,7 +4,7 @@ const config = {
 }
 
 const options = {
-    appId: '7aed4c69656b47c4a98c2f7d19e18678',
+    appId: '0dc2be67524d4ac491543dd26ad6467e',
     channel: 'codepie',
     token: null,
 
