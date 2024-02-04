@@ -56,10 +56,14 @@ async function startOneToOneVideoCall() {
 }
 
 
+
+
 const startVideo = async () => {
     rtc.localVideoTrack = await AgoraRTC.createCameraVideoTrack();
     rtc.client.publish(rtc.localVideoTrack);
     rtc.localVideoTrack.play('local');
+
+
 }
 
 const startAudio = async () => {
@@ -89,13 +93,11 @@ btnCam.click(function () {
         $(this).removeClass('fa-video-camera');
         $(this).css('color', 'red');
         stopVideo();
-
     } else {
         $(this).addClass('fa-video-camera');
         $(this).removeClass('fa-video-slash');
         $(this).css('color', 'black');
         startVideo();
-
     }
 });
 //Toggle Microphone
@@ -105,14 +107,11 @@ btnMic.click(function () {
         $(this).removeClass('fa-microphone');
         $(this).css('color', 'red');
         stopAudio()
-
     } else {
         $(this).addClass('fa-microphone');
         $(this).removeClass('fa-microphone-slash');
         $(this).css('color', 'black');
         startAudio();
-
-
     }
 });
 
@@ -134,3 +133,5 @@ btnPlug.click(function () {
         stopAudio();
     }
 });
+
+
